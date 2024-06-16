@@ -1,17 +1,7 @@
 -- Spanish hub
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("🟦⬜⭐⬜🟦🟦⬜⬜⭐SPANISH HUB - nescoroco⭐⬜⬜🟦🟦⬜⭐⬜🟦", "BloodTheme")
-
--- SCRIPTS HECHO TOTALMENTE POR NESCOROCO, SUBIDO ORIGINALMENTE EN SCR  IPTHUB
-
--- YOUTUBE: https://www.youtube.com/@Nescoroco/videos
-
--- DISCORD: https://discord.gg/64pnKhQj
-
--- SCRIPTBLOX: https://scriptblox.com/profile
-
--- ROBLOX: https://www.roblox.com/users/2399670479/profile
+local Window = Library.CreateLib("---SPANISH HUB---", "LightTheme")
 
 -- Menu
 local Main = Window:NewTab("📄Scripts Universales📄")
