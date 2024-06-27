@@ -1,0 +1,85 @@
+local Player = game.Players.LocalPlayer --This Will Reveal The Player Name
+  local Window = OrionLib:MakeWindow({
+		Name = &quot;Electric Astro System Key&quot;,
+		HidePremium = false,
+		SaveConfig = true,
+		ConfigFolder = &quot;OrionTest&quot;,
+        IntroText = &quot;Loading Script...&quot;       
+}) --Esto cargará el Script Hub
+
+function MakeScriptHub()
+         loadstring(game:HttpGet(&#039;https://raw.githubusercontent.com/Miakel12353/BANANO/main/manzanov2&#039;))() --Put The Script That Will Load If The Key Is Correct Here
+end
+
+OrionLib:MakeNotification({
+	Name = &quot;Logged In!&quot;,
+	Content = &quot;You need key &quot;..Player.Name..&quot;.&quot;,
+	Image = &quot;rbxassetid://4483345998&quot;,
+	Time = 5
+}) --Notification
+
+getgenv().Key = &quot;NinjaXZ&quot; --Put The Correct Key Here
+getgenv().KeyInput = &quot;string&quot; --Require For The Key To Work
+
+local Tab = Window:MakeTab({
+	Name = &quot;Key&quot;,
+	Icon = &quot;rbxassetid://4483345998&quot;,
+	PremiumOnly = false
+}) --Making A Tab
+
+Tab:AddTextbox({
+	Name = &quot;Key&quot;,
+	Default = &quot;Enter Key.&quot;,
+	TextDisappear = true,
+	Callback = function(Value)
+		getgenv().KeyInput = Value
+	end	  
+}) --You Will Enter The Key Here
+
+Tab:AddButton({
+    Name = &quot;Checar Key&quot;,
+    Callback = function()
+        if getgenv().KeyInput == getgenv().Key then
+            OrionLib:MakeNotification({
+                Name = &quot;Checando key&quot;,
+                Content = &quot;Checando tu key&quot;,
+                Image = &quot;rbxassetid://4483345998&quot;,
+                Time = 5
+            })
+            wait(2)
+            OrionLib:MakeNotification({
+                Name = &quot;Key correcta!&quot;,
+                Content = &quot;La key es correcta.&quot;,
+                Image = &quot;rbxassetid://4483345998&quot;,
+                Time = 5
+            })
+            wait(1)
+            OrionLib:Destroy()
+            wait(.3)
+            MakeScriptHub()
+        else
+           OrionLib:MakeNotification({
+                Name = &quot;Checando key&quot;,
+                Content = &quot;Checking The Key You Entered&quot;,
+                Image = &quot;rbxassetid://4483345998&quot;,
+                Time = 5
+            })
+            wait(2)
+            OrionLib:MakeNotification({
+                Name = &quot;Key incorrecta!&quot;,
+                Content = &quot;The key you entered is incorrect.&quot;,
+                Image = &quot;rbxassetid://4483345998&quot;,
+                Time = 5
+            })
+        end
+    end
+}) --This Will Check The Key You Entered
+
+Tab:AddButton({
+	Name = &quot;Copy Key&quot;,
+	Callback = function()
+      		setclipboard(&quot;https://discord.gg/ArNDyJvyms&quot;) --This Will Copy The Link Of The Key
+  	end    
+}) 
+    
+OrionLib:Init() --Require If The Script Is Done</span>
