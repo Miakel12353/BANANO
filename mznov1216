@@ -1,0 +1,5 @@
+--Script #1
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Miakel12353/BANANO/main/manzanov2'))()
+
+--Script #2
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Miakel12353/BANANO/main/DETS'))()
